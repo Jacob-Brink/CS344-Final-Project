@@ -17,11 +17,31 @@ h1 {
  }
 
  .view {
-     height: 80vh; // set height to 80% of the viewport so that the user knows to scroll downwards
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     align-items: center;
+     height: 200vh; // set height to 80% of the viewport so that the user knows to scroll downwards
+     
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+     background-color: white;
+ }
+
+ .sticky-focused {
+    position: sticky;
+    bottom: 0px;
+    height: 100vh;
+   width: 100vw;
+   z-index: 3;
+    
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .unsticky-unfocused {
+    position: static;
+    z-index: 2;
  }
 
  #main {

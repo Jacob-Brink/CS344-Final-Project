@@ -1,0 +1,33 @@
+#mode-collapse-main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0px;
+    padding-left: 100px; 
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+h2 {
+    font-size: 7vw;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+img.shown {
+    display: block;
+    position: absolute;
+    width: 12vw;
+    height: auto;
+}  
+
+p {
+    font-size: 16px;
+    width: 40vw;
+    min-width: 400px;
+}

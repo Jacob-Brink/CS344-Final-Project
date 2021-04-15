@@ -1,0 +1,7 @@
+<div id="mode-collapse-main" appScrollObserver [percentageCenter]="0.25" [tempDisableScrolling]="200" (scrolledIntoView)="inView($event)">
+    <h2 [@pop-in]="hasBeenViewed ? 't-visible' : 't-hidden'" >Mode Collapse</h2>
+    <div *ngFor="let cat of cats; let i = index">
+        <img class="hidden" src="https://timesofindia.indiatimes.com/photo/67586673.cms">
+    </div>
+    <p [@pop-in]="hasBeenViewed ? 'p-visible' : 'p-hidden'">Mode collapse occurs when the generator lacks variety. For example, if a GAN trained on cat images experienced mode collapse, you would end up with just one type of cat and nothing else.</p>
+</div>

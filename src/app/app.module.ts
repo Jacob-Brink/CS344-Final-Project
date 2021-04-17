@@ -8,6 +8,7 @@ import { ModeCollapseShowcaseComponent } from './components/mode-collapse-showca
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollObserverDirective } from './scroll-observer.directive';
 import { ScrollFocusComponent } from './components/scroll-focus/scroll-focus.component';
+import { ShowcaseScreenFocusComponent } from './components/showcase-screen-focus/showcase-screen-focus.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ScrollFocusComponent } from './components/scroll-focus/scroll-focus.com
     TutorialComponent,
     ModeCollapseShowcaseComponent,
     ScrollObserverDirective,
-    ScrollFocusComponent
+    ScrollFocusComponent,
+    ShowcaseScreenFocusComponent
   ],
   imports: [
     BrowserModule,

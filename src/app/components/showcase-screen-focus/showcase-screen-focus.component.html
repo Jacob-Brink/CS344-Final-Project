@@ -1,0 +1,16 @@
+<app-scroll-focus [extraScrolling]="100" [innerHeight]="innerHeight">
+    <div id="master-container">
+        <div id="main-container" #mainContainer>
+            <div id="text-container">
+                <div id="text">
+                    <h2>{{title}}</h2>
+                    <p>{{paragraph}}</p>
+                </div>
+            </div>
+        
+            <div id="animation">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>    
+</app-scroll-focus>

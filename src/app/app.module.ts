@@ -10,6 +10,8 @@ import { ScrollObserverDirective } from './scroll-observer.directive';
 import { ScrollFocusComponent } from './components/scroll-focus/scroll-focus.component';
 import { ShowcaseScreenFocusComponent } from './components/showcase-screen-focus/showcase-screen-focus.component';
 import {MatButtonModule} from '@angular/material/button';
+import { AboutComponent } from './pages/about/about.component';
+import { PlayComponent } from './pages/play/play.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import {MatButtonModule} from '@angular/material/button';
     ModeCollapseShowcaseComponent,
     ScrollObserverDirective,
     ScrollFocusComponent,
-    ShowcaseScreenFocusComponent
+    ShowcaseScreenFocusComponent,
+    AboutComponent,
+    PlayComponent
   ],
   imports: [
     BrowserModule,

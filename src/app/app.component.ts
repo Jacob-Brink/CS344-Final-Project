@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CS344-Final-Project';
+  constructor(private router: Router) {
+    router.events.subscribe((val) => {
+      console.log(this.router.url)
+  });
+  }
 }

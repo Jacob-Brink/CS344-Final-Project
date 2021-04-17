@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterViewChecked, AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-showcase-screen-focus',
@@ -10,20 +11,26 @@ export class ShowcaseScreenFocusComponent implements OnInit, AfterViewInit {
   @Input() title: string = "Unset title";
   @Input() paragraph: string = "Unset paragraph";
 
-  @ViewChild('mainContainer') mainContainer: ElementRef | any;
+  @ViewChild('mainContainer', {static: false}) mainContainer: ElementRef | any;
 
   ngAfterViewInit() {
-    this.safeToViewDOM = true;
-    this.setHeight();
+    setInterval(() => {
+      this.safeToViewDOM = true;
+      this.setHeight();
+    }, 100)
   }
 
   safeToViewDOM: boolean = false;
 
   innerHeight: number = 0;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+    });
+  }
 
   ngOnInit(): void {
+    
   }
 
   setHeight(): void {

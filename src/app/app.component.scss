@@ -1,3 +1,27 @@
 #app-main-container {
     
 }
+
+#app-main-header {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    height: 50px;
+    width: 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    z-index: 4;
+    align-items: center;
+    -webkit-box-shadow: 1px 13px 22px 8px rgba(0,0,0,0.2); 
+    box-shadow: 1px 13px 22px 8px rgba(0,0,0,0.2);
+    margin-left: 40px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+button {
+    height: 40px;
+}

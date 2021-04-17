@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollObserverDirective } from './scroll-observer.directive';
 import { ScrollFocusComponent } from './components/scroll-focus/scroll-focus.component';
 import { ShowcaseScreenFocusComponent } from './components/showcase-screen-focus/showcase-screen-focus.component';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { ShowcaseScreenFocusComponent } from './components/showcase-screen-focus
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

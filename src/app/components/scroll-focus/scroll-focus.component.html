@@ -1,0 +1,6 @@
+<div #outerElem class="outer-frame" 
+    [style.height.vh]="innerHeight+extraScrolling">
+    <div #innerElem class="inner-frame" [style.height.vh]="innerHeight" [style.top.vh]="50 - innerHeight / 2">
+        <ng-content></ng-content>
+    </div>
+</div>

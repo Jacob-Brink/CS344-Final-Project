@@ -8,13 +8,14 @@ import { OverrideScrollingService } from './services/override-scrolling.service'
 export class ScrollObserverDirective {
 
   @Input() percentageCenter: number = 0.25; // 1 means trigger event when any part of element is in view, 0.5 when you want 50% of the element to be centered
-  @Input() tempDisableScrolling: number = 300; // indicates the amount of scrolling needed to unlock scrolling again once item is in view
 
   lastScrollPosition: number = 0;
   scrollY: number = 0;
   scrollEffort: number = 0;
 
   firstViewed: boolean = false;
+
+  @Output() updateScrollPosition: EventEmitter<number> = new EventEmitter();
 
   @Output() scrolledIntoView:EventEmitter<boolean> = new EventEmitter();
   elemRef: ElementRef;
@@ -26,8 +27,10 @@ export class ScrollObserverDirective {
   }
 
   onScroll(e: Event) {
-    console.log(window.scrollY);
+    this.updateScrollPosition.emit(this.elemRef.nativeElement.getBoundingClientRect().top);
+
     var scrolledIn = -1 * this.elemRef.nativeElement.getBoundingClientRect().top;
+    //console.log(`f ${scrolledIn}`)
     let elemHeight = this.elemRef.nativeElement.offsetHeight;
 
     let upperBoundViewport = window.innerHeight * (0.5 - 0.5 * this.percentageCenter);

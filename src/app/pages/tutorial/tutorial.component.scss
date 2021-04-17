@@ -11,13 +11,17 @@ h1 {
     margin-left: 0 auto;
  }
 
+ #main-title {
+    height: 100vh;
+ }
+
  h2 {
     font-family: Arial, Arial, Helvetica, sans-serif;
     font-size: 5vw;
  }
 
  .view {
-     height: 200vh; // set height to 80% of the viewport so that the user knows to scroll downwards
+     height: 400vh; // set height to 80% of the viewport so that the user knows to scroll downwards
      
    display: flex;
    justify-content: center;

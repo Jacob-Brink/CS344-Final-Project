@@ -12,7 +12,11 @@ import { ShowcaseScreenFocusComponent } from './components/showcase-screen-focus
 import {MatButtonModule} from '@angular/material/button';
 import { AboutComponent } from './pages/about/about.component';
 import { PlayComponent } from './pages/play/play.component';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,11 @@ import { PlayComponent } from './pages/play/play.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatPaginatorModule,
+    MatSliderModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

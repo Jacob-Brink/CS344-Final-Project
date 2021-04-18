@@ -1,1 +1,51 @@
-<p>play works!</p>
+<div id="play-master-container">
+
+    <div id="information-display">
+        <div id="image-output">
+            <div id="images">
+                <img *ngFor="let cat of cats; let i = index" src="https://timesofindia.indiatimes.com/photo/67586673.cms">
+            </div>
+            
+            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[10, 20]"></mat-paginator>
+        </div>
+    
+        <div id="graph-output">
+            Graph of discriminator vs generator loss
+        </div>
+    </div>
+    
+    <div id="controller-section">
+        Learning Rate: <mat-slider></mat-slider>
+    
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">DCGAN</mat-radio-button>
+            <mat-radio-button value="2">Wassertein GAN</mat-radio-button>
+            <mat-radio-button value="3">Classic GAN</mat-radio-button>
+        </mat-radio-group>
+       
+       
+    </div>
+
+</div>
+<div>
+    <div class="learning-section">
+        
+<mat-accordion #matAccordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Learning Section!
+        </mat-panel-title>
+        <mat-panel-description>
+            Mini quiz and explanation on X, Y, or Z that is apparent in this particular set of parameters
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      hi
+  
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+    </div>
+</div>

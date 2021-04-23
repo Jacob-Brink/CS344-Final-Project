@@ -17,6 +17,8 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
     MatRadioModule,
     MatFormFieldModule,
     MatExpansionModule,
+    MatCardModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

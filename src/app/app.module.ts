@@ -19,6 +19,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { DeveloperCardComponent } from './components/developer-card/developer-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatIconModule} from '@angular/material/icon';
     ScrollFocusComponent,
     ShowcaseScreenFocusComponent,
     AboutComponent,
-    PlayComponent
+    PlayComponent,
+    DeveloperCardComponent
   ],
   imports: [
     BrowserModule,

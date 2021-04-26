@@ -7,21 +7,34 @@
     top: 0px;
     background-color: white;
     height: 50px;
-    width: 260px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content: center;
+    align-items: center;
     padding-top: 2px;
     padding-bottom: 2px;
     z-index: 4;
-    align-items: center;
-    -webkit-box-shadow: 1px 13px 22px 8px rgba(0,0,0,0.2); 
-    box-shadow: 1px 13px 22px 8px rgba(0,0,0,0.2);
-    margin-left: 40px;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+
+    -webkit-box-shadow: 0px 6px 10px 2px rgba(0,0,0,0.1); 
+    box-shadow: 0px 6px 10px 2px rgba(0,0,0,0.1);
 }
 
-button {
+a {
     height: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    font-size: 16px;
+}
+
+a:visited, a:link {
+    color: black;
+}
+
+a:hover {
+    color: #007CFF;
 }

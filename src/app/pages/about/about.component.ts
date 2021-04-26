@@ -7,7 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  developers: Array<{ name: string; role: string; selfDescription: string; }> = [
+    {
+      name: "Andrew Baker",
+      role: "GAN Developer",
+      selfDescription: "hello"
+    },
+    {
+      name: "Jacob Brink",
+      role: "Web Developer",
+      selfDescription: "Who reads these things anyways?"
+    },
+    {
+      name: "Won Seok Park",
+      role: "GAN Developer",
+      selfDescription: "hi"
+    }
+  ];
+
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

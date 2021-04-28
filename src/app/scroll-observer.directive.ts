@@ -26,31 +26,34 @@ export class ScrollObserverDirective {
     this.scrolling = scrolling;
   }
 
-  onScroll(e: Event) {
+  checkScrollPosition() {
     this.updateScrollPosition.emit(this.elemRef.nativeElement.getBoundingClientRect().top);
-
-    var scrolledIn = -1 * this.elemRef.nativeElement.getBoundingClientRect().top;
-    //console.log(`f ${scrolledIn}`)
-    let elemHeight = this.elemRef.nativeElement.offsetHeight;
+    
+    var scrolledIn = (-1) * this.elemRef.nativeElement.getBoundingClientRect().top;
 
     let upperBoundViewport = window.innerHeight * (0.5 - 0.5 * this.percentageCenter);
     let lowerBoundViewport = window.innerHeight * (0.5 + 0.5 * this.percentageCenter);
 
     if (scrolledIn+window.innerHeight*0.5 > upperBoundViewport && scrolledIn+window.innerHeight*0.5 < lowerBoundViewport) {
-      
       this.scrolledIntoView.emit(true);
       
       if (!this.firstViewed) {
         this.lastScrollPosition = window.scrollY;
       }
-
-      if (this.scrollEffort > 20000) {//this.tempDisableScrolling) {
-        // unlock scrolling
-      } else {
-        // counteract scrolling
-      }
       
+    } else if (scrolledIn+window.innerHeight * 0.5 > window.innerHeight || scrolledIn < window.innerHeight * -.5) {
+      this.scrolledIntoView.emit(false);
     }
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.checkScrollPosition();
+    }, 300); // If I don't do this hack, then getBoundingClientRect() thinks everything is at top of viewport, which breaks the trigger
+  }
+
+  onScroll(e: Event) {
+    this.checkScrollPosition();
   }
 
 }

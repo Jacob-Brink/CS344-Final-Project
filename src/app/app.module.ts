@@ -20,6 +20,9 @@ import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { DeveloperCardComponent } from './components/developer-card/developer-card.component';
+import { IntroductionComponent } from './components/screens/introduction/introduction.component';
+import { DifficultiesComponent } from './components/screens/difficulties/difficulties.component';
+import { ScrollSnapDirective } from './directives/scroll-snap.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { DeveloperCardComponent } from './components/developer-card/developer-ca
     ShowcaseScreenFocusComponent,
     AboutComponent,
     PlayComponent,
-    DeveloperCardComponent
+    DeveloperCardComponent,
+    IntroductionComponent,
+    DifficultiesComponent,
+    ScrollSnapDirective
   ],
   imports: [
     BrowserModule,

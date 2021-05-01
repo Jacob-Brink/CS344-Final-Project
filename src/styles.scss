@@ -1,4 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$retro-app-primary: mat-palette($mat-indigo, A200, A300, A200);
+$retro-app-accent: mat-palette($mat-pink, A200, A200, A400);
+
+$retro-app-warn: mat-palette($mat-green);
+
+$retro-app-theme: mat-dark-theme((
+    color: (
+        primary: $retro-app-primary,
+        accent: $retro-app-accent,
+        warn: $retro-app-warn,
+    )
+));
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@include angular-material-theme($retro-app-theme);
+
+@font-face {
+    font-family: BebasNeue-Regular;
+    src: url('/assets/fonts/BebasNeue/BebasNeue-Regular.otf') format("opentype");
+ }
+
+.retro-theme-text {
+    font-family: 'BebasNeue-Regular';
+}
+
+:root {
+    --color-primary: #{mat-color($retro-app-primary)};
+    --color-accent: #{mat-color($retro-app-accent)};
+    --color-warn: #{mat-color($retro-app-warn)};
+  }
+
+/* You can add global styles to this file, and also import other style files */
+

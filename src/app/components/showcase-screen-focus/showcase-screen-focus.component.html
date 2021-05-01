@@ -1,58 +1,18 @@
-<app-scroll-focus [extraScrolling]="0" [innerHeight]="innerHeight">
-    <div id="master-container" #mainContainer [@focus]="isFocused ? 't-visible' : 't-hidden'" appScrollObserver [percentageCenter]="0.25" (scrolledIntoView)="inView($event)">
-        <ng-content></ng-content>
-        <!-- <div id="main-container">
-            <div id="text-container">
-                <div id="text">
-                    <h2>{{title}}</h2>
-                    <p>{{paragraph}}</p>
-                </div>
-            </div>
-        </div> -->
-    </div>    
+<div>
+    <div id="master-container" #mainContainer [@focus]="isFocused ? 't-visible' : 't-hidden'" appScrollObserver
+        [percentageCenter]="0.25" (scrolledIntoView)="inView($event)" >
+        
+        <mat-card class="text-container">
+            <mat-card-header>
+                <mat-card-title>{{title}}</mat-card-title>
+            </mat-card-header>
+        
+            <mat-card-content>{{paragraph}}</mat-card-content>
+        </mat-card>
 
-    <!-- <div class="animation-mask">
-    </div> 
-
-    <div [@focus]="isFocused ? 'g-visible' : 'g-hidden'">
-        <ng-content></ng-content>
-        <div class="animation" id="1">
-            <div>
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg">
-            </div>                
-        </div>
-        <div class="animation" id="two">
-            <div>
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg">
-            </div>                
-        </div>
-        <div class="animation" id="three">
-            <div>
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="https://primewikis.com/wp-content/uploads/minecraft-texture-1620x800.png">
-                <img src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg">
-            </div>                
+        <div id="graphics">
+            <ng-content></ng-content>
         </div>
 
-    </div> -->
-
-</app-scroll-focus>
+    </div>
+</div>

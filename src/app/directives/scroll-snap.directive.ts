@@ -46,7 +46,7 @@ export class ScrollSnapDirective {
         
       }
 
-    }, 300);
+    }, 500);
     
   }
 

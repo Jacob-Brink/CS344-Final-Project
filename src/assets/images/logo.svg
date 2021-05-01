@@ -53,16 +53,29 @@
        y2="132.76723"
        gradientUnits="userSpaceOnUse"
        gradientTransform="rotate(14.51238,84.673789,84.09982)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient908"
-       id="linearGradient910-0"
-       x1="92.28978"
-       y1="71.38829"
-       x2="57.621948"
-       y2="132.76723"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(5.6430341,1.587594,-1.587594,5.6430341,-201.29684,-431.03942)" />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask4772">
+      <g
+         id="g4778"
+         transform="translate(-22.265457,18.261035)">
+        <rect
+           y="-17.847624"
+           x="22.265457"
+           height="212.49347"
+           width="213.32031"
+           id="rect4774"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1" />
+        <path
+           inkscape:export-ydpi="96"
+           inkscape:export-xdpi="96"
+           sodipodi:nodetypes="cccccccccccc"
+           inkscape:connector-curvature="0"
+           id="path4776"
+           d="M 136.03886,7.2597741 38.884454,103.8255 64.047753,105.14503 141.95214,172.90189 215.51763,106.14668 159.7192,62.413238 127.89306,94.699658 172.18445,109.8439 143.28247,136.92056 91.257791,94.136208 175.26591,7.0617721 Z"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.13901663;stroke-opacity:1" />
+      </g>
+    </mask>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -71,11 +84,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.64"
-     inkscape:cx="186.83451"
-     inkscape:cy="479.67489"
+     inkscape:zoom="0.45254834"
+     inkscape:cx="-287.22346"
+     inkscape:cy="702.93527"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
@@ -97,23 +110,17 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-85.333317)">
-    <circle
-       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
-       id="path912"
-       cx="87.406998"
-       cy="94.499252"
-       r="28.537201" />
-    <path
-       style="fill:url(#linearGradient910-0);fill-opacity:1;stroke:none;stroke-width:5.86210632;stroke-opacity:1"
-       d="M 114.51294,95.252746 3.6883466,205.40583 l 28.7039134,1.50521 88.86598,77.29064 83.91658,-76.14806 -63.64959,-49.88699 -36.30425,36.82932 50.52344,17.27511 -32.96866,30.8865 -59.344851,-48.80434 95.828561,-99.326339 z"
-       id="path815-0"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccccccc"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect832"
+       width="213.32031"
+       height="212.49348"
+       x="0"
+       y="0.41341144"
+       mask="url(#mask4772)" />
   </g>
 </svg>

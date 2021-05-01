@@ -1,113 +1,124 @@
-h2 {
-    font-size: 50px;
-}
-
-p {
-    font-size: 16px;
-    width: 40vw;
-    min-width: 400px;
-}
-
 #master-container {
     width: 97vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-#main-container {
-    width: calc(100%-80px);
-    display: flex;
-    flex-direction: row;
-    height: calc(100vh);
+.text-container {
+    width: 500px;
+    height: 300px;
+    padding-left: 20px;
+    margin-left: 40px;
+}
 
-    font-family: Arial, Helvetica, sans-serif; 
-    padding-left: 40px; 
-    padding-right: 40px;
-    padding-top: 80px;
-    padding-bottom: 80px;
+#title-text {
+}
+
+#detail-text {
 
 }
 
-.animation-mask {
-    height: 100vh;
-    width: 400px;
-    left: 50vw;
-    top: 0px;
-    position: absolute;
-    z-index: 2;
-    //mask-image: linear-gradient(to bottom, black 5%, transparent 20%, transparent 80%, black 95%);
+#graphics {
+    width: 100%;
 }
 
-.animation {
-    height: 100vh;
-    width: 200px;
-    top: 0px;
-    left: 50vw;
-    overflow: hidden;
-    position: absolute;
-}
 
-#two {
-    left: calc(50vw + 200px + 10px);
-}
 
-#two div {
-    animation: rollingImages 11s infinite linear reverse;
-}
+// #main-container {
+//     width: calc(100%-80px);
+//     display: flex;
+//     flex-direction: row;
+//     height: calc(100vh);
 
-#three {
-    left: calc(50vw + 2 * (200px + 10px));
-}
+//     font-family: Arial, Helvetica, sans-serif; 
+//     padding-left: 40px; 
+//     padding-right: 40px;
+//     padding-top: 80px;
+//     padding-bottom: 80px;
 
-.animation div img {
-    height: 100%;
-    width: 200px;
-    object-fit: cover;
-}   
+// }
 
-.animation div {
-    height: calc(100%*8/4); // show 4 images at a time, have twice the size
-    overflow: hidden;
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    animation: rollingImages 10s infinite linear;  
-}
+// .animation-mask {
+//     height: 100vh;
+//     width: 400px;
+//     left: 50vw;
+//     top: 0px;
+//     position: absolute;
+//     z-index: 2;
+//     //mask-image: linear-gradient(to bottom, black 5%, transparent 20%, transparent 80%, black 95%);
+// }
 
-@keyframes slidingReveal {
-    0% {
-        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-    }
-    99% {
-        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-    }
-    100% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-}
+// .animation {
+//     height: 100vh;
+//     width: 200px;
+//     top: 0px;
+//     left: 50vw;
+//     overflow: hidden;
+//     position: absolute;
+// }
 
-@keyframes rollingImages {
-    0% {
-        transform: translate(0, calc(-1*100%/8*4));
-    }
-    100% {
-        transform: translatey(0, 0);
-    }
-}
+// #two {
+//     left: calc(50vw + 200px + 10px);
+// }
 
-#text-container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+// #two div {
+//     animation: rollingImages 11s infinite linear reverse;
+// }
 
-#text {
-}
+// #three {
+//     left: calc(50vw + 2 * (200px + 10px));
+// }
+
+// .animation div img {
+//     height: 100%;
+//     width: 200px;
+//     object-fit: cover;
+// }   
+
+// .animation div {
+//     height: calc(100%*8/4); // show 4 images at a time, have twice the size
+//     overflow: hidden;
+//     display: flex;
+//     position: absolute;
+//     flex-direction: column;
+//     animation: rollingImages 10s infinite linear;  
+// }
+
+// @keyframes slidingReveal {
+//     0% {
+//         clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+//     }
+//     99% {
+//         clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+//     }
+//     100% {
+//         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+//     }
+// }
+
+// @keyframes rollingImages {
+//     0% {
+//         transform: translate(0, calc(-1*100%/8*4));
+//     }
+//     100% {
+//         transform: translatey(0, 0);
+//     }
+// }
+
+// #text-container {
+//     width: 50%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+// }
+
+// #text {
+// }
 
 @media screen and (max-width: 1000px) {
     

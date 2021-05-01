@@ -1,13 +1,12 @@
 #app-main-container {
-    height: 102vh; // force scrollbar on all pages for consistency
+    height: 101vh; // force scrollbar on all pages for consistency
     scroll-behavior: smooth;
 }
 
 #app-main-header {
     position: fixed;
     top: 0px;
-    background-color: white;
-    height: 75px;
+    height: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -16,14 +15,17 @@
     padding-top: 2px;
     padding-bottom: 2px;
     z-index: 4;
-
+    background: linear-gradient(to right, var(--color-accent) 5%, var(--color-primary) 40%, var(--color-primary));
     -webkit-box-shadow: 0px 6px 10px 2px rgba(0,0,0,0.1); 
     box-shadow: 0px 6px 10px 2px rgba(0,0,0,0.1);
 }
 
 #logo {
-    margin-right: 20px;
-    width: 65px;
+    left: 5px;
+   height: 40px;
+    position: absolute;
+    border-radius: 30%;
+    padding: 6px;
 }
 
 a {
@@ -34,13 +36,14 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 
 a:visited, a:link {
-    color: black;
+    color: white;
 }
 
 a:hover {
-    color: #007CFF;
+    color: white;
 }

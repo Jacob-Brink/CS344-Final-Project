@@ -1,7 +1,6 @@
-<app-scroll-focus [extraScrolling]="0" [innerHeight]="innerHeight">
+<div>
     
     <div id="master-container" #mainContainer appScrollObserver [percentageCenter]="0.25" (scrolledIntoView)="inView($event)">
-        <ng-content></ng-content>
         <div id="main-container">
             <div id="text-container">
                 <div id="text">
@@ -55,4 +54,4 @@
 
     </div>
 
-</app-scroll-focus>
+</div>

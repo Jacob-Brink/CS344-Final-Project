@@ -2,12 +2,12 @@
 
 @include mat-core();
 
-$retro-app-primary: mat-palette($mat-indigo, A200, A300, A200);
-$retro-app-accent: mat-palette($mat-pink, A200, A200, A400);
+$retro-app-primary: mat-palette($mat-indigo, A400, A100, A100);
+$retro-app-accent: mat-palette($mat-deep-orange, A400, A200, A400);
 
 $retro-app-warn: mat-palette($mat-green);
 
-$retro-app-theme: mat-dark-theme((
+$retro-app-theme: mat-light-theme((
     color: (
         primary: $retro-app-primary,
         accent: $retro-app-accent,
@@ -16,7 +16,10 @@ $retro-app-theme: mat-dark-theme((
 ));
 
 
+
+
 html, body { height: 100%; }
+html { overflow-y: scroll; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @include angular-material-theme($retro-app-theme);
@@ -26,7 +29,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     src: url('/assets/fonts/BebasNeue/BebasNeue-Regular.otf') format("opentype");
  }
 
-.retro-theme-text {
+
+ .retro-theme-text {
     font-family: 'BebasNeue-Regular';
 }
 
@@ -35,6 +39,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --color-accent: #{mat-color($retro-app-accent)};
     --color-warn: #{mat-color($retro-app-warn)};
   }
+
+@mixin header-text {
+    color: lightgray;
+    font-family: BebasNeue-Regular;
+    //text-decoration: underline;
+    letter-spacing: 2px;
+    font-size: 64px;
+    -webkit-text-decoration-color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+}
+
 
 /* You can add global styles to this file, and also import other style files */
 

@@ -1,90 +1,151 @@
 @import "/src/styles.scss";
 
- #tutorial-splash-title {
-    height: 99vh;
-    width: 99vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
- }
+#tutorial-splash-title {
+  height: 99vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;    
+}
 
- #tutorial-splash-title h1 {
-   @include header-text;
-    position: absolute;
-    left: 30px;
-    top: 40px;
-    font-size: 50px;
- }
+#title-text {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
 
- #rad-image {
-   position: absolute;
-   margin-right: 0px;
-   bottom: 100px;
-   height: 200px;
-   width: 400px;
-   background-image: url("https://media4.giphy.com/media/udhngZK2IFTc4/200.gif");
-   background-size: cover;
- }
+#rolling-images { 
+   height: 100vh;
+   width: 100%;
+   overflow: hidden;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+$image-count: 4;
+$image-height: calc(100vh / #{$image-count});
+
+.rolling-images-slides {
+   height: calc(2 * #{$image-count} * #{$image-height});
+   width: var(--image-width);
+   animation: rolling 3s linear infinite;
+
+   display: flex;
+   flex-direction: column;
+}
+
+.rolling-images-slides img {
+   height: $image-height;
+   width: $image-height;
+   object-fit: cover;
+}
+
+@keyframes rolling {
+   0% {
+      transform: translatey(calc(-1 * 4 * #{$image-height}));
+   }
+   100% {
+      transform: translatey(0px);
+   }
+}
+
+#title-start {
+  //@include mat-core($custom-typography);
+  //@include header-text;
+  font-weight: bold;
+  //   background: linear-gradient(to right, blue 20%, lime 90%);
+  //   color: transparent;
+  //   background-clip: text;
+  //mix-blend-mode: lighten;
+  font-size: calc(20px + 1.5vw);
+  margin-bottom: -50px;
+}
+
+
+
+#rad-image {
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  background-image: url("https://media4.giphy.com/media/udhngZK2IFTc4/200.gif");
+  background-size: cover;
+}
 
 #tutorial-splash-title p {
-   //background-color: black;
-   position: absolute;
-   font-size: 80px;
-   font-weight: bold;
-   letter-spacing: 4px;
-   font-family: 'BebasNeue-Regular';
-   color: white;
-   left: 20px;
-   //mix-blend-mode: exclusion;
+  //background-color: black;
+  position: absolute;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-family: "BebasNeue-Regular";
+  color: white;
+  left: 20px;
+  //mix-blend-mode: exclusion;
 }
 
 img {
-   height: 40vh;
+  height: 40vh;
 }
 
- #main-title {
-    height: 100vh;
+#main-title {
+  height: 100vh;
+}
+
+.view {
+  height: 400vh; // set height to 80% of the viewport so that the user knows to scroll downwards
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sticky-focused {
+  position: sticky;
+  bottom: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unsticky-unfocused {
+  position: static;
+  z-index: 2;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  margin-right: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#dne {
+   @include header-text;
+   font-weight: bold;
+   color: red;
+   line-height: calc(40px + 5vw);
+   font-size: calc(40px + 6vw);
+
+   // text-decoration:line-through;
+   // -webkit-text-decoration-color: black;
+   //  text-decoration-color: black;
+   //  text-decoration-skip-ink: normal;
  }
 
- h2 {
-    @include header-text;
- }
 
- .view {
-     height: 400vh; // set height to 80% of the viewport so that the user knows to scroll downwards
-     
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
- }
-
- .sticky-focused {
-    position: sticky;
-    bottom: 0px;
-    height: 100vh;
-   width: 100vw;
-   z-index: 3;
-    
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
- }
-
- .unsticky-unfocused {
-    position: static;
-    z-index: 2;
- }
-
- #main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
- }
-
- p {
-    margin-right: 10vw;
-    font-family: Arial, Helvetica, sans-serif;
- }

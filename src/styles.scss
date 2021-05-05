@@ -15,7 +15,19 @@ $retro-app-theme: mat-light-theme((
     )
 ));
 
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
 
+@font-face {
+    font-family: BebasNeue-Regular;
+    src: url('/assets/fonts/BebasNeue/BebasNeue-Regular.otf') format("opentype");
+ }
+
+$custom-typography: mat-typography-config(
+  $font-family: 'BebasNeue-Regular',
+  $headline: mat-typography-level(64px, 40px, 700),
+  $body-1: mat-typography-level(24px, 16px, 100)
+);
 
 
 html, body { height: 100%; }
@@ -23,14 +35,11 @@ html { overflow-y: scroll; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @include angular-material-theme($retro-app-theme);
-
-@font-face {
-    font-family: BebasNeue-Regular;
-    src: url('/assets/fonts/BebasNeue/BebasNeue-Regular.otf') format("opentype");
- }
+//@include angular-material-typography($custom-typography);
 
 
- .retro-theme-text {
+
+.retro-theme-text {
     font-family: 'BebasNeue-Regular';
 }
 
@@ -41,7 +50,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
 @mixin header-text {
-    color: lightgray;
+    color: black;
     font-family: BebasNeue-Regular;
     //text-decoration: underline;
     letter-spacing: 2px;

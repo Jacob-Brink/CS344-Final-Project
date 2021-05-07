@@ -1,38 +1,12 @@
 <div class="about-main-container" appScrollSnap class="mat-app-background">
 
+    <h1>Meet the Team</h1>
 
-    <div class="screen">
-        <div id="splash-title">
-            <img src="assets/images/logo.svg" id="logo">
-            <h1>GAN Labs</h1>
-            <p>Our team has dedicated itself to ensuring the next generation of computer scientists and tinkerers can
-                get a working understanding of cutting edge generative technology. Our philosophy is that learning is
-                done best when one is able to
-                play with and get a "feel" of this technology before the math and theory behind it is studied. We
-                believe our
-                product GAN Labs achieves this intuition via the playground activity. Through it, users are able to get
-                a sense for how GAN's are
-                difficult to train and how each of the parameters work together, all without the frustrations and time
-                wasting of
-                training GAN's with one's own resources.
-            </p>
+    <div class="developer-profiles">
+        <div *ngFor="let dev of developers">
+            <app-developer-card name="{{dev.name}}" role="{{dev.role}}" selfDescription="{{dev.selfDescription}}">
+            </app-developer-card>
         </div>
     </div>
-    
-
-    <div class="screen">
-        <div id="team-container">
-            <h1>Meet the Team</h1>
-    
-            <div class="developer-profiles">
-                <div *ngFor="let dev of developers">
-                    <app-developer-card name="{{dev.name}}" role="{{dev.role}}" selfDescription="{{dev.selfDescription}}">
-                    </app-developer-card>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
 
 </div>

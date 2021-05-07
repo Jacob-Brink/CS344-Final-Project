@@ -141,7 +141,7 @@ p {
    line-height: calc(20px + 10vw);
    margin-bottom: 0px;
    margin-top: 0px;
-   background: linear-gradient(to right, blue 10%, red 80%);
+   background: linear-gradient(to right, turquoise 10%, blue 80%);
     color: transparent;
     background-clip: text;
    // text-decoration:line-through;
@@ -150,12 +150,17 @@ p {
    //  text-decoration-skip-ink: normal;
  }
 
+.card {
+  width: 300px;
+  height: 100px;
+}
+
  #exist {
    margin-top: 0px;
-   line-height: calc(30px + 22vw);
-    font-size: calc(50px + 22vw);
-    color: red;
-    background: linear-gradient(to right, red 10%, orange 90%);
+   line-height: calc(30px + 18vw);
+    font-size: calc(50px + 18vw);
+    color: gray;
+    background: linear-gradient(to right, red 20%, orange 90%);
     color: transparent;
     background-clip: text;
     margin-left: -5px;
@@ -186,4 +191,25 @@ p {
     z-index: 2;
  }
 
+#title-skin {
+  width: auto;
+  height: 80%;
+}
 
+.screen {
+  height: 100vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title-header {
+  font-family: 'BebasNeue-Regular';
+  letter-spacing: 2px;
+  color: gray;
+}
+
+#gan-explanation-screen {
+}

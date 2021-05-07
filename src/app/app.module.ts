@@ -23,8 +23,9 @@ import { DeveloperCardComponent } from './components/developer-card/developer-ca
 import { IntroductionComponent } from './components/screens/introduction/introduction.component';
 import { DifficultiesComponent } from './components/screens/difficulties/difficulties.component';
 import { ScrollSnapDirective } from './directives/scroll-snap.directive';
-import { ShowcaseComponent } from './pages/showcase/showcase.component';
+//import { ShowcaseComponent } from './pages/showcase/showcase.component';
 import { MinecraftSkinViewerComponent } from './components/minecraft-skin-viewer/minecraft-skin-viewer.component';
+import { CustomCardComponent } from './components/custom-card/custom-card.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +41,8 @@ import { MinecraftSkinViewerComponent } from './components/minecraft-skin-viewer
     IntroductionComponent,
     DifficultiesComponent,
     ScrollSnapDirective,
-    ShowcaseComponent,
-    MinecraftSkinViewerComponent
+    MinecraftSkinViewerComponent,
+    CustomCardComponent
   ],
   imports: [
     BrowserModule,

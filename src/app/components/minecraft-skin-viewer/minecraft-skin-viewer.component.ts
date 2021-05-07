@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as THREE from 'three';
-let skin = require('minecraft-skin');
+let skinview3d = require('skinview3d');
 
 @Component({
   selector: 'app-minecraft-skin-viewer',
@@ -9,56 +9,55 @@ let skin = require('minecraft-skin');
 })
 export class MinecraftSkinViewerComponent implements OnInit {
 
-
-  @ViewChild('minecraftViewer', { static: false }) minecraftViewer: ElementRef | any;
-
-  setup() {
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-    var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    this.minecraftViewer.nativeElement.appendChild(renderer.domElement);
-    console.log(this.minecraftViewer);
-
-    var geometry = new THREE.BoxGeometry(1, 1, 1);
-    var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    var cube = new THREE.Mesh(geometry, material);
-    
-
-    console.log(cube.position);
-
-    var viking = skin(THREE, 'assets/images/skin.png')
-    // viking.mesh.position.y = 0;
-    // viking.mesh.position.z = 0;
-    // viking.mesh.position.x = 0;
-    //scene.add(viking.mesh);
-    scene.add(cube);
-    camera.position.z = 5;
-
-    renderer.render(scene, camera);
-
-    // var animate = function () {
-    //   requestAnimationFrame(animate);
-
-    //   cube.rotation.x += 0.01;
-    //   cube.rotation.y += 0.01;
-
-    //   renderer.render(scene, camera);
-    // };
-
-    // animate();
-
-  }
-
   constructor() { }
 
   ngAfterViewInit() {
-    //this.setup();
   }
 
   ngOnInit(): void {
-
+    let skinViewer = new skinview3d.SkinViewer({
+      canvas: document.getElementById("skin_container"),
+      width: 300,
+      height: 400,
+      skin: "/assets/images/skin.png"
+    });
+  
+    // Change viewer size
+    skinViewer.width = 500;
+    skinViewer.height = 700;
+  
+    // Load another skin
+    skinViewer.loadSkin("img/skin2.png");
+  
+    // Unload(hide) the cape / elytra
+    skinViewer.loadCape(null);
+    
+    // set the background color
+    skinViewer.renderer.setClearColor(0xffffff);
+  
+    // Control objects with your mouse!
+    let control = skinview3d.createOrbitControls(skinViewer);
+    control.enableRotate = true;
+    control.enableZoom = false;
+    control.enablePan = false;
+  
+    // Add an animation
+    let walk = skinViewer.animations.add(skinview3d.WalkingAnimation);
+    // Add another animation
+    let rotate = skinViewer.animations.add(skinview3d.RotatingAnimation);
+    // Remove an animation, stop walking dude
+    walk.remove();
+    // Remove the rotating animation, and make the player face forward
+    //rotate.resetAndRemove();
+    // And run for now!
+    let run = skinViewer.animations.add(skinview3d.RunningAnimation);
+  
+    // Set the speed of an animation
+    run.speed = 3;
+    // Pause single animation
+    run.paused = true;
+    // Pause all animations!
+    //skinViewer.animations.paused = true;
   }
 
 }

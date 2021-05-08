@@ -1,3 +1,220 @@
+@import "/src/styles.scss";
+
+#tutorial-splash-title {
+  height: 99vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;    
+}
+
+#title-text {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+
+#rolling-images { 
+   height: 100vh;
+   width: 100%;
+   overflow: hidden;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+$image-count: 4;
+$image-height: calc(100vh / #{$image-count});
+
+.rolling-images-slides {
+   height: calc(2 * #{$image-count} * #{$image-height});
+   width: var(--image-width);
+   animation: rolling 3s linear infinite;
+
+   display: flex;
+   flex-direction: column;
+}
+
+.rolling-images-slides img {
+   height: $image-height;
+   width: $image-height;
+   object-fit: cover;
+}
+
+@keyframes rolling {
+   0% {
+      transform: translatey(calc(-1 * 4 * #{$image-height}));
+   }
+   100% {
+      transform: translatey(0px);
+   }
+}
+
+#title-start {
+  //@include mat-core($custom-typography);
+  //@include header-text;
+  font-weight: bold;
+  //   background: linear-gradient(to right, blue 20%, lime 90%);
+  //   color: transparent;
+  //   background-clip: text;
+  //mix-blend-mode: lighten;
+  font-size: calc(20px + 1.5vw);
+}
+
+
+
+#rad-image {
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  background-image: url("https://media4.giphy.com/media/udhngZK2IFTc4/200.gif");
+  background-size: cover;
+}
+
+#tutorial-splash-title p {
+  //background-color: black;
+  position: absolute;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-family: "BebasNeue-Regular";
+  color: white;
+  left: 20px;
+  //mix-blend-mode: exclusion;
+}
+
+img {
+  height: 40vh;
+}
+
+#main-title {
+  height: 100vh;
+}
+
+.view {
+  height: 400vh; // set height to 80% of the viewport so that the user knows to scroll downwards
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sticky-focused {
+  position: sticky;
+  bottom: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unsticky-unfocused {
+  position: static;
+  z-index: 2;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  margin-right: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.red-emphasis {
+   @include header-text;
+   font-weight: bold;
+   color: black;
+   font-size: calc(40px + 10vw);
+   line-height: calc(20px + 10vw);
+   margin-bottom: 0px;
+   margin-top: 0px;
+   background: linear-gradient(to right, turquoise 10%, blue 80%);
+    color: transparent;
+    background-clip: text;
+   // text-decoration:line-through;
+   // -webkit-text-decoration-color: black;
+   //  text-decoration-color: black;
+   //  text-decoration-skip-ink: normal;
+ }
+
+.card {
+  width: 300px;
+  height: 100px;
+}
+
+ #exist {
+   margin-top: 0px;
+   line-height: calc(30px + 18vw);
+    font-size: calc(50px + 18vw);
+    color: gray;
+    background: linear-gradient(to right, red 20%, orange 90%);
+    color: transparent;
+    background-clip: text;
+    margin-left: -5px;
+    letter-spacing: 10px;
+ }
+
+ #page-introduction {
+    height: 100vh;
+    width: 97vw;
+ }
+
+ .text-box {
+    border: 2px solid black;
+    padding: 20px;
+    width: 40vw;
+    margin-top: 40px;
+ }
+
+ .text-box-title {
+    position: relative;
+    background-color: #fafafa;
+    width: 90px;
+    top: -33px;
+    left: -30px;
+    height: 24px;
+    padding: 3px;
+
+    z-index: 2;
+ }
+
+#title-skin {
+  width: auto;
+  height: 80%;
+}
+
+.screen {
+  height: 100vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title-header {
+  font-family: 'BebasNeue-Regular';
+  letter-spacing: 2px;
+  color: gray;
+}
+
+#gan-explanation-screen {
+}
+
+
 #app-main-container {
     
     scroll-behavior: smooth;

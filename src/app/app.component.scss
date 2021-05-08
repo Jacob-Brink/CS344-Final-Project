@@ -1,8 +1,8 @@
 @import "/src/styles.scss";
 
-#tutorial-splash-title {
+#landing-screen {
   height: 99vh;
-  width: 95vw;
+  width: 99vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,48 +11,49 @@
 
 #title-text {
    width: 100%;
+   max-width: 50vw;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
    align-items: flex-start;
 }
 
-#rolling-images { 
-   height: 100vh;
-   width: 100%;
-   overflow: hidden;
+// #rolling-images { 
+//    height: 100vh;
+//    width: 100%;
+//    overflow: hidden;
 
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-}
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: space-around;
+// }
 
-$image-count: 4;
-$image-height: calc(100vh / #{$image-count});
+// $image-count: 4;
+// $image-height: calc(100vh / #{$image-count});
 
-.rolling-images-slides {
-   height: calc(2 * #{$image-count} * #{$image-height});
-   width: var(--image-width);
-   animation: rolling 3s linear infinite;
+// .rolling-images-slides {
+//    height: calc(2 * #{$image-count} * #{$image-height});
+//    width: var(--image-width);
+//    animation: rolling 3s linear infinite;
 
-   display: flex;
-   flex-direction: column;
-}
+//    display: flex;
+//    flex-direction: column;
+// }
 
-.rolling-images-slides img {
-   height: $image-height;
-   width: $image-height;
-   object-fit: cover;
-}
+// .rolling-images-slides img {
+//    height: $image-height;
+//    width: $image-height;
+//    object-fit: cover;
+// }
 
-@keyframes rolling {
-   0% {
-      transform: translatey(calc(-1 * 4 * #{$image-height}));
-   }
-   100% {
-      transform: translatey(0px);
-   }
-}
+// @keyframes rolling {
+//    0% {
+//       transform: translatey(calc(-1 * 4 * #{$image-height}));
+//    }
+//    100% {
+//       transform: translatey(0px);
+//    }
+// }
 
 #title-start {
   //@include mat-core($custom-typography);
@@ -62,10 +63,14 @@ $image-height: calc(100vh / #{$image-count});
   //   color: transparent;
   //   background-clip: text;
   //mix-blend-mode: lighten;
+  color: white;
   font-size: calc(20px + 1.5vw);
 }
 
-
+p {
+  color: white;
+  @include header-text;
+}
 
 #rad-image {
   position: absolute;
@@ -136,14 +141,13 @@ p {
 .red-emphasis {
    @include header-text;
    font-weight: bold;
-   color: black;
    font-size: calc(40px + 10vw);
    line-height: calc(20px + 10vw);
    margin-bottom: 0px;
    margin-top: 0px;
-   background: linear-gradient(to right, turquoise 10%, blue 80%);
-    color: transparent;
-    background-clip: text;
+//    background: linear-gradient(to right, turquoise 10%, blue 80%);
+//     color: transparent;
+//     background-clip: text;
    // text-decoration:line-through;
    // -webkit-text-decoration-color: black;
    //  text-decoration-color: black;
@@ -159,10 +163,10 @@ p {
    margin-top: 0px;
    line-height: calc(30px + 18vw);
     font-size: calc(50px + 18vw);
-    color: gray;
-    background: linear-gradient(to right, red 20%, orange 90%);
-    color: transparent;
-    background-clip: text;
+    color: white;
+    // background: linear-gradient(to right, red 20%, orange 90%);
+    // color: transparent;
+    // background-clip: text;
     margin-left: -5px;
     letter-spacing: 10px;
  }
@@ -173,7 +177,7 @@ p {
  }
 
  .text-box {
-    border: 2px solid black;
+    border: 2px solid white;
     padding: 20px;
     width: 40vw;
     margin-top: 40px;
@@ -258,17 +262,17 @@ a {
     align-items: center;
     font-size: 18px;
     letter-spacing: 2px;
-    color: black;
+    color: white;
     padding-left: 6px;
     padding-right: 6px;
 }
 
 a:visited, a:link {
-    color: black;
+    color: white;
     padding-top: 2px;
 }
 
 a:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
 }

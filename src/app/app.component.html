@@ -1,4 +1,4 @@
-<div id="app-main-container" class="mat-app-background">
+<div id="app-main-container">
     <div id="app-main-header" class="retro-theme-text">
         <a>Home</a>
         <a>Process</a>
@@ -6,19 +6,19 @@
         <a>Gallery</a>
         <a>About</a>
     </div>
-    <div id="main" appScrollSnap class="mat-app-background">
+    <div id="main" appScrollSnap>
 
-        <div id="tutorial-splash-title">
-            <!-- <div id="rad-image"></div> -->
+        <div id="landing-screen" class="landing-screen-theme screen">
             <div id="title-text">
     
                 <h1 id="title-start">This Minecraft Player</h1>
                 
-                <h1 id="dne" class="red-emphasis">DOes NOT</h1>    
-                <h1 id="exist" class="red-emphasis">EXIST</h1>
+                <h1 id="dne" class="red-emphasis">DOes NOT </h1>    
+                <h1 class="red-emphasis">Exist</h1>
             </div>
     
-            <img id="title-skin" src="/assets/images/landing-page-blowup.png">
+            <app-minecraft-skin-viewer></app-minecraft-skin-viewer>
+            <!-- <img id="title-skin" src="/assets/images/landing-page-blowup.png"> -->
             
             <!-- <div id="rolling-images">
                 <div class="rolling-images-slides">
@@ -63,7 +63,7 @@
     
         <div class="screen" id="gallery-screen">
             <h2>Gallery</h2>
-            <app-minecraft-skin-viewer></app-minecraft-skin-viewer>
+            
         </div>
     
         <div class="screen" id="playground-screen">

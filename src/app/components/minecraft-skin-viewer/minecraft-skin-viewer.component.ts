@@ -33,11 +33,11 @@ export class MinecraftSkinViewerComponent implements OnInit {
     skinViewer.loadCape(null);
     
     // set the background color
-    skinViewer.renderer.setClearColor(0xffffff);
+    skinViewer.renderer.setClearColor(0x000000);
   
     // Control objects with your mouse!
     let control = skinview3d.createOrbitControls(skinViewer);
-    control.enableRotate = true;
+    control.enableRotate = false;
     control.enableZoom = false;
     control.enablePan = false;
   
@@ -46,14 +46,14 @@ export class MinecraftSkinViewerComponent implements OnInit {
     // Add another animation
     let rotate = skinViewer.animations.add(skinview3d.RotatingAnimation);
     // Remove an animation, stop walking dude
-    walk.remove();
+    //walk.remove();
     // Remove the rotating animation, and make the player face forward
     //rotate.resetAndRemove();
     // And run for now!
     let run = skinViewer.animations.add(skinview3d.RunningAnimation);
   
     // Set the speed of an animation
-    run.speed = 3;
+    run.speed = 0.2;
     // Pause single animation
     run.paused = true;
     // Pause all animations!

@@ -15,6 +15,63 @@ $retro-app-theme: mat-light-theme((
     )
 ));
 
+@mixin landing-screen-color($config-or-theme) {
+    $config: mat-get-color-config($config-or-theme);
+
+    $primary: map-get($config, primary);
+    $accent: map-get($config, accent);
+    $background: map-get($config, background);
+
+    .landing-screen-theme {
+        background-color: mat-color($background, background);
+        color: mat-color($primary);
+    }
+
+}
+
+@mixin landing-screen-typography($config-or-theme) {
+    $config: mat-get-typography-config($config-or-theme);
+
+    .landing-screen-theme {
+        font: {
+            family: mat-font-family($config, body-1);
+            size: mat-font-size($config, body-1);
+            weight: mat-font-weight($config, body-1);
+        }
+    }
+}
+
+@mixin landing-screen-theme($theme) {
+    $color: mat-get-color-config($theme);
+    $typography: mat-get-typography-config($theme);
+
+    @if $color != null {
+        @include landing-screen-color($color);
+    }
+    @if $typography != null {
+        @include landing-screen-typography($typography);
+    }
+}
+
+$retro-dark-app-primary: mat-palette($mat-pink, A400, A100, A100);
+$retro-dark-app-accent: mat-palette($mat-orange, A400, A200, A400);
+
+$retro-dark-app-warn: mat-palette($mat-green);
+
+$retro-dark-app-theme: mat-dark-theme($retro-dark-app-primary, $retro-dark-app-accent, $retro-dark-app-warn);
+
+// Set custom background color
+$retro-dark-app-background-color:#000000;
+
+// Insert custom background color
+$background: map-get($retro-dark-app-theme, background);
+$background: map_merge($background, (background: $retro-dark-app-background-color));
+$retro-dark-app-theme: map_merge($retro-dark-app-theme, (background: $background));
+
+
+@include angular-material-theme($retro-app-theme);
+@include landing-screen-theme($retro-dark-app-theme);
+
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 
@@ -34,7 +91,6 @@ html, body { height: 100%; }
 html { overflow-y: scroll; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@include angular-material-theme($retro-app-theme);
 //@include angular-material-typography($custom-typography);
 
 
@@ -50,11 +106,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
 @mixin header-text {
-    color: black;
-    font-family: BebasNeue-Regular;
+    font-family: 'BebasNeue-Regular';
     //text-decoration: underline;
     letter-spacing: 2px;
-    font-size: 64px;
     -webkit-text-decoration-color: var(--color-accent);
     text-decoration-color: var(--color-accent);
 }

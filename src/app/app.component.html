@@ -1,23 +1,29 @@
 <div id="app-main-container">
-    <div id="app-main-header" class="retro-theme-text">
-        <a>Home</a>
-        <a>Process</a>
-        <a>Playground</a>
-        <a>Gallery</a>
-        <a>About</a>
-    </div>
-    <div id="main" appScrollSnap>
+    
+    <div id="main">
 
         <div id="landing-screen" class="landing-screen-theme screen">
-            <div id="title-text">
-    
-                <h1 id="title-start">This Minecraft Player</h1>
-                
-                <h1 id="dne" class="red-emphasis">DOes NOT </h1>    
-                <h1 class="red-emphasis">Exist</h1>
+
+            <div id="app-main-header" class="retro-theme-text">
+                <a>Home</a>
+                <a>Process</a>
+                <a>Playground</a>
+                <a>Gallery</a>
+                <a>About</a>
             </div>
+
+            <div id="landing-showcase">
+                <div id="title-text">
     
-            <app-minecraft-skin-viewer></app-minecraft-skin-viewer>
+                    <h1 id="title-start">This Minecraft Player</h1>
+                    
+                    <h1 id="dne" class="red-emphasis">DOes NOT </h1>    
+                    <h1 class="red-emphasis" id="exist">Exist</h1>
+                </div>
+        
+                <app-minecraft-skin-viewer></app-minecraft-skin-viewer>
+            </div>
+            
             <!-- <img id="title-skin" src="/assets/images/landing-page-blowup.png"> -->
             
             <!-- <div id="rolling-images">
@@ -61,24 +67,26 @@
     <!-- 
         <app-introduction></app-introduction> -->
     
-        <div class="screen" id="gallery-screen">
-            <h2>Gallery</h2>
+        <div id="introduction-screen" class="screen">
+            <h2>The Minecraft spinoff of "thispersondoesnotexist" you didn't know you wanted.</h2>
+            <p>ThisMinecraftPlayerDoesNotExist is an experiment to see if we could recreate the GAN phenonomen known as thispersondoesnotexist in the context of the voxel sandbox game Minecraft.
+                More importantly, we hope this website can introduce people to what GAN's are in a fun, interactive format. We hope you enjoy this as much as we did making this! </p>
             
         </div>
     
-        <div class="screen" id="playground-screen">
+        <div id="playground-screen">
             <h2>Playground</h2>
             <app-custom-card title="Build your own Minecraft Skin!"></app-custom-card>
         </div>
     
-        <div class="screen">
+        <div>
             <h2>Our Process</h2>
-            <app-custom-card title="Tools used">
+            <app-custom-card title="Tools ggggffffffffffffffff f ffff used">
                 Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
             </app-custom-card>
         </div>
     
-        <div class="screen" id="gan-explanation-screen">
+        <div id="gan-explanation-screen">
             <h2>How GAN's work</h2>
             <app-custom-card title="Tools used">
                 Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum

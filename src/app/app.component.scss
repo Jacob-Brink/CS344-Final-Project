@@ -2,11 +2,18 @@
 
 #landing-screen {
   height: 99vh;
-  width: 99vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
+}
+
+#landing-showcase {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;    
+  align-items: center;
 }
 
 #title-text {
@@ -67,9 +74,11 @@
   font-size: calc(20px + 1.5vw);
 }
 
+h2 {
+  font-size: calc(40px + 1vw);
+}
+
 p {
-  color: white;
-  @include header-text;
 }
 
 #rad-image {
@@ -160,10 +169,10 @@ p {
 }
 
  #exist {
+   //@include header-text;
    margin-top: 0px;
-   line-height: calc(30px + 18vw);
-    font-size: calc(50px + 18vw);
-    color: white;
+   line-height: calc(34px + 17vw);
+    font-size: calc(54px + 17vw);
     // background: linear-gradient(to right, red 20%, orange 90%);
     // color: transparent;
     // background-clip: text;
@@ -228,7 +237,7 @@ p {
 }
 
 #app-main-header {
-    position: absolute;
+  position: relative;
     top: 0px;
     padding-top: 15px;
     width: 100%;
@@ -237,6 +246,7 @@ p {
     justify-content: center;
     align-items: center;
     padding-bottom: 8px;
+    background-color: blue;
     z-index: 4;
     //background: var(--color-primary);//linear-gradient(to right, var(--color-accent) 5%, var(--color-primary) 40%, var(--color-primary));
     // -webkit-box-shadow: 0px 6px 10px 2px rgba(0,0,0,0.1); 

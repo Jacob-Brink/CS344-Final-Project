@@ -87,8 +87,8 @@ $custom-typography: mat-typography-config(
 );
 
 
-html, body { height: 100%; }
-html { overflow-y: scroll; }
+html, body { height: 100%;  }
+html { overflow-y: scroll; overflow-x: hidden; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 //@include angular-material-typography($custom-typography);

@@ -3,12 +3,18 @@
 .custom-card-main-container {
     // width: 100%;
     // height: 100%;
+    box-sizing: border-box;
+    width: 100%;
     position: relative;
     max-width: 600px;
-    min-height: 200px;
+    min-width: 100px;
+    min-height: 150px;
     border: 2px black solid;
     // border-radius: 5px;
     
+    color: black;
+    z-index: -1;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +49,6 @@ $title-font-size: 28px;
     top: 8px;
     width: 100%;
     height: 100%;
-    z-index: -1;
     background-color: black;
     border: none;
 }
@@ -53,9 +58,13 @@ $title-font-size: 28px;
     border:none;
 }
 
+.copy .custom-card-description {
+}
+
 
 .custom-card-description {
     padding: 15px;
     padding-top:30px;
     flex: 1;
+    z-index: -4;
 }

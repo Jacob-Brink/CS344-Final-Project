@@ -1,28 +1,61 @@
+@import "/src/styles.scss";
+
 .custom-card-main-container {
     // width: 100%;
     // height: 100%;
     position: relative;
     max-width: 600px;
+    min-height: 200px;
     border: 2px black solid;
-    border-radius: 5px;
+    // border-radius: 5px;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    // padding: 10px;
+    
+    background-color: #fafafa;
 }
 
+$title-font-size: 28px;
+
 .custom-card-title {
+    @include header-text;
+    letter-spacing: 0px;
+    font-size: $title-font-size;
     display: inline-block;
     position: absolute;
-    top: -16px;
-    left: -9px;
+    top: calc(0px - #{$title-font-size} + 7px);
+    left: -10px;
     min-width: 100px;
-    background-color: #fafafa;
     padding: 5px; 
+    border: 2px black solid;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 3px;
+    background-color: var(--color-primary);
+    color: white;
 }
+
+.copy {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: black;
+    border: none;
+}
+
+.copy .custom-card-title {
+    background-color: black;
+    border:none;
+}
+
 
 .custom-card-description {
     padding: 15px;
+    padding-top:30px;
     flex: 1;
 }

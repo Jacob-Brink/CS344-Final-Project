@@ -11,7 +11,6 @@ export class AppComponent {
 
   constructor(private router: Router) {
     router.events.subscribe((val) => {
-      console.log(this.router.url)
   });
   }
 }

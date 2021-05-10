@@ -18,6 +18,11 @@ export class MinecraftSkinViewerComponent implements OnInit {
   control: any = null;
   skinViewer: any = null;
 
+  @ViewChild('canvasViewer') canvas!: ElementRef;
+  @ViewChild('walkButton') walkButton!: ElementRef;
+  @ViewChild('outerButton') outerButton!: ElementRef;
+
+
   @Input() width: number = -1;
   @Input() height: number = -1;
 
@@ -30,11 +35,15 @@ export class MinecraftSkinViewerComponent implements OnInit {
 
 
   @Input() set outerEnabled(value: boolean) {
-    this.eventFire(document.getElementById("outer-clicker"), 'click');
+    if (this.outerButton) {
+      this.eventFire(this.outerButton.nativeElement, 'click');
+    }
   }
 
   @Input() set walkingEnabled(value: boolean) {
-    this.eventFire(document.getElementById("walk-clicker"), 'click');
+    if (this.walkButton) {
+      this.eventFire(this.walkButton.nativeElement, 'click');
+    }
   };
 
   @Input() set skinImage(value: string) {
@@ -42,22 +51,14 @@ export class MinecraftSkinViewerComponent implements OnInit {
     this.skinViewer.loadSkin(this._skinImage);
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (this.walk != null) {
-      this.setWalk(true)
-      console.log(this.skinViewer);
-    }
-  }
-
   constructor() { 
    
   }
 
   ngAfterViewInit() {
-    console.log("ngAfterViewInit")
     setTimeout(() => {
-      this.resizeViewer();
       this.setup();
+      this.resizeViewer();
     }, 400);
   }
 
@@ -73,8 +74,9 @@ export class MinecraftSkinViewerComponent implements OnInit {
     this.resizeViewer();
   }
 
-  setWalk: any = null;
 
+  // https://stackoverflow.com/questions/2705583/how-to-simulate-a-click-with-javascript
+  // don't know why, but unless I call skinview3d functions from event listener callbacks, nothing works
   eventFire(el: any, etype: any): void{
     if (el.fireEvent) {
       el.fireEvent('on' + etype);
@@ -85,12 +87,13 @@ export class MinecraftSkinViewerComponent implements OnInit {
     }
   }
 
+  // https://github.com/bs-community/skinview3d
   setup(): void {
     const skinParts = ["head", "body", "rightArm", "leftArm", "rightLeg", "leftLeg"];
 		const skinLayers = ["innerLayer", "outerLayer"];
 
     this.skinViewer = new skinview3d.SkinViewer({
-      canvas: document.getElementById("skin_container"),
+      canvas: this.canvas.nativeElement,
       skin: this.skinImage,
     });
   
@@ -105,9 +108,6 @@ export class MinecraftSkinViewerComponent implements OnInit {
     
     // set the background color
     this.skinViewer.renderer.setClearColor(0x000000);
-  
-    
-
 
     // Control objects with your mouse!
     this.control = skinview3d.createOrbitControls(this.skinViewer);
@@ -121,8 +121,8 @@ export class MinecraftSkinViewerComponent implements OnInit {
     
     let outerEnabled = false;
 
-    document.getElementById("walk-clicker")?.addEventListener("click", () => walk.paused = !walk.paused); // a hack, cuz the library only works when it's functions are called on event
-    document.getElementById("outer-clicker")?.addEventListener("click", () => {
+    this.walkButton.nativeElement?.addEventListener("click", () => walk.paused = !walk.paused); // a hack, cuz the library only works when it's functions are called on event
+    this.outerButton.nativeElement?.addEventListener("click", () => {
       outerEnabled = !outerEnabled;
       for (const part of skinParts) {
 					this.skinViewer.playerObject.skin[part][skinLayers[1]].visible = outerEnabled;
@@ -154,9 +154,8 @@ export class MinecraftSkinViewerComponent implements OnInit {
     //skinViewer.animations.paused = true;
   }
 
-  // https://github.com/bs-community/skinview3d
+  
   ngOnInit(): void {
-    console.log("ngOnInit")
   }
 
 }

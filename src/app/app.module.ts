@@ -21,6 +21,10 @@ import { ScrollSnapDirective } from './directives/scroll-snap.directive';
 import { MinecraftSkinViewerComponent } from './components/minecraft-skin-viewer/minecraft-skin-viewer.component';
 import { CustomCardComponent } from './components/custom-card/custom-card.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { GalleryComponent } from './screens/gallery/gallery.component';
+import { GalleryCollectionComponent } from './components/gallery-collection/gallery-collection.component';
+import { GalleryViewerComponent } from './components/gallery-viewer/gallery-viewer.component';
+import { GalleryThumbnailComponent } from './components/gallery-thumbnail/gallery-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     DeveloperCardComponent,
     ScrollSnapDirective,
     MinecraftSkinViewerComponent,
-    CustomCardComponent
+    CustomCardComponent,
+    GalleryComponent,
+    GalleryCollectionComponent,
+    GalleryViewerComponent,
+    GalleryThumbnailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+#gallery-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90vw;
+}
+
+.gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+app-gallery-thumbnail {
+    width: 12vw;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-collection',
@@ -7,11 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryCollectionComponent implements OnInit {
 
-  skinImages: Array<number> = new Array(5);
+  @Input()
+  imageLinks: Array<string> = [];
+
+  @Output()
+  selectedImage: EventEmitter<number> = new EventEmitter<number>();
+
+  @Input()
+  start: number = 10;
+
+  rowCount: number = 5;
+
+  skinImages: Array<number> = new Array(this.rowCount);
+  rows: Array<number> = new Array(2);
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSelection(id: number): void {
+    this.selectedImage.emit(id);
   }
 
 }

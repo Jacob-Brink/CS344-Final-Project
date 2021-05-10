@@ -21,4 +21,8 @@ export class GalleryThumbnailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelection(): void {
+    this.wasSelected.emit(this.id);
+  }
+
 }

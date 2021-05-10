@@ -1,1 +1,13 @@
-<p>gallery-viewer works!</p>
+<div id="gallery-highlighted-view">
+    <div class="view-visual">
+        
+    </div>
+    <div class="controls">
+        <div class="view-controls">
+            <mat-checkbox class="example-margin" color="primary">Outer</mat-checkbox>
+            <mat-checkbox class="example-margin" color="primary">Walking</mat-checkbox>
+            <button mat-raised-button color="primary">Download</button>
+        </div>
+        <mat-paginator [length]="10000000" [pageSize]="20"></mat-paginator>
+    </div>
+</div>

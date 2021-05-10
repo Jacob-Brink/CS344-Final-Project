@@ -1,11 +1,11 @@
 <div id="gallery-highlighted-view">
-    <div class="view-visual">
-        
+    <div id="view-visual">
+        <app-minecraft-skin-viewer [width]="300*1.2" [height]="400*1.2" [walkingEnabled]="isWalking" [outerEnabled]="hasOuter"></app-minecraft-skin-viewer>
     </div>
     <div class="controls">
         <div class="view-controls">
-            <mat-checkbox class="example-margin" color="primary">Outer</mat-checkbox>
-            <mat-checkbox class="example-margin" color="primary">Walking</mat-checkbox>
+            <mat-checkbox class="example-margin" color="primary" [(ngModel)]="hasOuter">Outer</mat-checkbox>
+            <mat-checkbox class="example-margin" color="primary" [(ngModel)]="isWalking">Walking</mat-checkbox>
             <button mat-raised-button color="primary">Download</button>
         </div>
         <mat-paginator [length]="10000000" [pageSize]="20"></mat-paginator>

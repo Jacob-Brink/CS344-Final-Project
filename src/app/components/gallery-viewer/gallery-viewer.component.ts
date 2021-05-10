@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryViewerComponent implements OnInit {
 
+  isWalking: boolean = false;
+  hasOuter: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

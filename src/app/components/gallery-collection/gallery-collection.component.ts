@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-gallery-collection',
@@ -13,21 +14,25 @@ export class GalleryCollectionComponent implements OnInit {
   @Output()
   selectedImage: EventEmitter<number> = new EventEmitter<number>();
 
+  @Output()
+  pageChangeEvent: EventEmitter<number> = new EventEmitter<number>();
+
   @Input()
-  start: number = 10;
+  start: number = 0;
 
-  rowCount: number = 5;
-
-  skinImages: Array<number> = new Array(this.rowCount);
-  rows: Array<number> = new Array(2);
-
-  constructor() { }
+  
+  
+  constructor() {}
 
   ngOnInit(): void {
   }
 
   onSelection(id: number): void {
     this.selectedImage.emit(id);
+  }
+
+  onPageChange(e: PageEvent) {
+    this.pageChangeEvent.emit(e.pageIndex);
   }
 
 }

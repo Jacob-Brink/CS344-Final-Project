@@ -11,7 +11,7 @@ export class GalleryThumbnailComponent implements OnInit {
   id: number = 0;
 
   @Input()
-  imageURL: string = '/assets/images/front-back-example.png';
+  imageURL: string = '/assets/images/skin.png';
 
   @Output()
   wasSelected: EventEmitter<number> = new EventEmitter<number>();

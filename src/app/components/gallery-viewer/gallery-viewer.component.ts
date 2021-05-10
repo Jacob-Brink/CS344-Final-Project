@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-viewer',
@@ -9,6 +9,9 @@ export class GalleryViewerComponent implements OnInit {
 
   isWalking: boolean = false;
   hasOuter: boolean = false;
+
+  @Input()
+  skinImage: string = '';
 
   constructor() { }
 

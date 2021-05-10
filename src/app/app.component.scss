@@ -229,8 +229,8 @@ p {
 }
 
 .screen {
-  height: 92vh;
-  width: 80vw;
+  min-height: 100vh;
+  width: 100vw;
   min-width: 800px;
   @include flexdown;
   z-index: -2;
@@ -301,6 +301,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.gallery.screen {
+  // background-color: skyblue;
+  // height: 110vh;
 }
 
 .gallery-row {

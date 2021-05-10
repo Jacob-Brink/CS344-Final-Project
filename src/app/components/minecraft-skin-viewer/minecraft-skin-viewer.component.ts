@@ -47,8 +47,9 @@ export class MinecraftSkinViewerComponent implements OnInit {
   };
 
   @Input() set skinImage(value: string) {
-    this._skinImage = value;
-    this.skinViewer.loadSkin(this._skinImage);
+    if (this.skinViewer) {
+      this.skinViewer.loadSkin(value);
+    }
   }
 
   constructor() { 
@@ -126,8 +127,6 @@ export class MinecraftSkinViewerComponent implements OnInit {
       outerEnabled = !outerEnabled;
       for (const part of skinParts) {
 					this.skinViewer.playerObject.skin[part][skinLayers[1]].visible = outerEnabled;
-          console.log(this.skinViewer.playerObject.skin[part]["outerLayer"].visible)
-          console.log(outerEnabled);
 			}
     })
     

@@ -1,5 +1,7 @@
-<div id="gallery-view">
-    <div class="gallery-row" *ngFor="let row of rows; let r = index;">
-        <app-gallery-thumbnail *ngFor="let skinImage of skinImages; let i = index;" (wasSelected)="onSelection($event)" [id]="i + rowCount * r + start"></app-gallery-thumbnail>
+<div class="gallery-main-container">
+    <mat-paginator class="paginator" [length]="10000000" [pageSize]="20" (page)="onPageChange($event)"></mat-paginator>
+    <div id="gallery-view">
+        <app-gallery-thumbnail *ngFor="let image of imageLinks; let i = index;" [imageURL]="image"
+                (wasSelected)="onSelection($event)" [id]="i"></app-gallery-thumbnail>
     </div>
 </div>

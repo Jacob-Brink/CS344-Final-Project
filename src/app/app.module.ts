@@ -20,6 +20,7 @@ import { DeveloperCardComponent } from './components/developer-card/developer-ca
 import { ScrollSnapDirective } from './directives/scroll-snap.directive';
 import { MinecraftSkinViewerComponent } from './components/minecraft-skin-viewer/minecraft-skin-viewer.component';
 import { CustomCardComponent } from './components/custom-card/custom-card.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CustomCardComponent } from './components/custom-card/custom-card.compon
     MatExpansionModule,
     MatCardModule,
     MatIconModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

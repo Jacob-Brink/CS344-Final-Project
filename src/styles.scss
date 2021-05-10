@@ -59,7 +59,7 @@ $retro-dark-app-accent: mat-palette($mat-orange, A400, A200, A400);
 $retro-dark-app-warn: mat-palette($mat-green);
 
 $retro-dark-app-theme: mat-dark-theme($retro-dark-app-primary, $retro-dark-app-accent, $retro-dark-app-warn);
-$retro-app-theme: mat-dark-theme($retro-dark-app-primary, $retro-dark-app-accent, $retro-dark-app-warn);
+$retro-app-theme: mat-light-theme($retro-dark-app-primary, $retro-dark-app-accent, $retro-dark-app-warn);
 
 // Set custom background color
 $retro-dark-app-background-color:#000000;
@@ -76,7 +76,7 @@ $retro-dark-app-background-color:#000000;
     @return $theme;
 }
 
-@include angular-material-theme(set-background-color($retro-app-theme, skyblue));
+@include angular-material-theme($retro-app-theme);
 @include landing-screen-theme(set-background-color($retro-app-theme, black));
 
 // Define a custom typography config that overrides the font-family as well as the

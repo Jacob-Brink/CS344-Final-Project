@@ -9,8 +9,6 @@ export class CustomCardComponent implements OnInit {
 
   @Input() title: string = "Title";
 
-  @Input() description: string = "Description";
-
   constructor() { }
 
   ngOnInit(): void {

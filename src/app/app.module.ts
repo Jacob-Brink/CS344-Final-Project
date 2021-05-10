@@ -25,6 +25,11 @@ import { GalleryComponent } from './screens/gallery/gallery.component';
 import { GalleryCollectionComponent } from './components/gallery-collection/gallery-collection.component';
 import { GalleryViewerComponent } from './components/gallery-viewer/gallery-viewer.component';
 import { GalleryThumbnailComponent } from './components/gallery-thumbnail/gallery-thumbnail.component';
+import { ScreenComponent } from './components/screen/screen.component';
+import { ScreenTitleComponent } from './components/screen-title/screen-title.component';
+import { ScreenContentComponent } from './components/screen-content/screen-content.component';
+import { ScreenContentSectionComponent } from './components/screen-content-section/screen-content-section.component';
+import { ScreenContentImageCollageComponent } from './components/screen-content-image-collage/screen-content-image-collage.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { GalleryThumbnailComponent } from './components/gallery-thumbnail/galler
     GalleryComponent,
     GalleryCollectionComponent,
     GalleryViewerComponent,
-    GalleryThumbnailComponent
+    GalleryThumbnailComponent,
+    ScreenComponent,
+    ScreenTitleComponent,
+    ScreenContentComponent,
+    ScreenContentSectionComponent,
+    ScreenContentImageCollageComponent
   ],
   imports: [
     BrowserModule,

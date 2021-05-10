@@ -1,0 +1,13 @@
+div {
+    width: 90%;
+    height: 90%;
+    color: gray;
+    font-size: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    //background: linear-gradient(to right, blue 0%, red 50%, orange 100%);
+}
+
+:host {
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+h1 {
+    font-size: calc(15px + 2vw);
+    padding: calc(10px + 2vw);
+    width: 90%;
+}
+
+:host {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

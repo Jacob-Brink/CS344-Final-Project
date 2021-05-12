@@ -1,4 +1,4 @@
-<div class="custom-card-main-container">
+<div class="custom-card-main-container" [class.hasTitle]="title.length > 0">
     <!-- <div class="copy custom-card-main-container">
         <div class="custom-card-title">
             {{title}}
@@ -8,10 +8,10 @@
         </div>
     </div> -->
 
-    <div class="custom-card-title">
+    <div class="custom-card-title" *ngIf="title.length > 0">
         {{title}}
     </div>
-    <div class="custom-card-description">
+    <div class="custom-card-description" [class.quoteBorder]="title.length > 0">
         <ng-content></ng-content>
     </div>
 </div>

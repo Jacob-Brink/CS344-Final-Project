@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ScreenContentTextComponent implements OnInit {
 
   @Input()
-  title: string = "no title";
+  title: string = "";
 
   constructor() { }
 

@@ -70,14 +70,14 @@
         <app-screen title="The Minecraft spinoff of 'ThisPersonDoesNotExist' you didn't know you needed!">
             <app-screen-content>
                 <app-screen-content-section>
-                    <app-screen-content-text title="Our Inspiration">
+                    <app-screen-content-text>
                         "This Minecrafter Does Not Exist" is an experiment to see if we could recreate the GAN phenonomen
                         known as "this person does not exist" in the context of the voxel sandbox game Minecraft.
                         More importantly, we hope this website can introduce people to what GAN's are in a fun,
                         interactive format. We hope you enjoy this as much as we did!   
                     </app-screen-content-text>
-                    <app-screen-content-image-collage>
-                    </app-screen-content-image-collage>
+                    <!-- <app-screen-content-image-collage>
+                    </app-screen-content-image-collage> -->
                 </app-screen-content-section>
                 <app-screen-content-section>
                     <app-screen-content-text title="What we Offer">
@@ -93,14 +93,14 @@
         <app-screen title="Behind the Scenes">
             <app-screen-content>
                 <app-screen-content-section>
-                    <app-screen-content-text title="Data Wrangling">
+                    <app-screen-content-text>
                         "This Minecrafter Does Not Exist" is an experiment to see if we could recreate the GAN phenonomen
                         known as "this person does not exist" in the context of the voxel sandbox game Minecraft.
                         More importantly, we hope this website can introduce people to what GAN's are in a fun,
                         interactive format. We hope you enjoy this as much as we did!   
                     </app-screen-content-text>
-                    <app-screen-content-image-collage>
-                    </app-screen-content-image-collage>
+                    <!-- <app-screen-content-image-collage>
+                    </app-screen-content-image-collage> -->
                 </app-screen-content-section>
                 <app-screen-content-section>
                     <app-screen-content-text title="Lightweight GAN">
@@ -113,6 +113,48 @@
                 <app-screen-content-section>
                     <app-screen-content-text title="Website Design">
                         I, Jacob Brink, worked on the website, designing the theme of “ThisMinecrafterDoesNotExist” as a parody of thispersondoesnotexist. I used Angular for the front end, skinview3d node module to display the minecraft skins as 3d models, and node js to host the images.  
+                    </app-screen-content-text>
+                </app-screen-content-section>
+            </app-screen-content>            
+        </app-screen>
+
+        <app-screen title="So what is a GAN?">
+            <app-screen-content>
+                <app-screen-content-section>
+                    <app-screen-content-text>
+                        Best said by the writers at fast.ai, “GAN stands for Generative Adversarial Nets and were invented by Ian Goodfellow.” A GAN takes in data and creates two elements to generate new images. The first is a critic, a model that will take in the true data and the generated images and determine which is true and which has been generated. The second element is the generator, a model that takes in the data, analyzes similarities, and makes its own, trying to trick the critic into believing its images. Because of this, a GAN improves by attempting to fool itself.
+                        <a class="reference" href="https://colab.research.google.com/github/fastai/fastai/blob/master/nbs/24_vision.gan.ipynb#scrollTo=_YkGTzCj7GhD">source</a>    
+                    </app-screen-content-text>
+                    <!-- <app-screen-content-image-collage>
+                    </app-screen-content-image-collage> -->
+                </app-screen-content-section>
+                <app-screen-content-section>
+                    <app-screen-content-text title="">
+                        Due to the adversarial nature of GANs, there is the inherent issue of instability. The two elements of a GAN, the critic and the generator, are trying to get the best of each other, and both grow through this competition. If one were to become stronger than the other, competition begins to dissolve, and neither model improves.
+                        <a class="reference" href="https://towardsdatascience.com/instability-in-training-text-gan-20273d6a859a">source</a>
+                    </app-screen-content-text>
+                </app-screen-content-section>
+                <app-screen-content-section>
+                    <app-screen-content-text title="Mode Collapse">
+                        Mode collapse is an issue where a general lack of noise in the generator causes it to create the same image each iteration. This is an issue for both the generator and the critic, as the generator only learns to create an image, while the critic only learns to look for issues in very fixed, generator specific areas.
+                        <a class="reference" href="https://towardsdatascience.com/instability-in-training-text-gan-20273d6a859a">source</a>
+                    </app-screen-content-text>
+                </app-screen-content-section>
+                <app-screen-content-section>
+                    <app-screen-content-text title="Vanishing Gradient">
+                        Similar to the inherent instability, vanishing gradient is an issue where the critic becomes good enough that the generator no longer learns how to beat it. As with the instability, this causes the competition to halt and stops each model from growing.
+                        <a class="reference" href="https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b">source</a>
+                    </app-screen-content-text>
+                </app-screen-content-section>
+                <app-screen-content-section>
+                    <app-screen-content-text title="Non Convergence">
+                        Non-convergence is an issue not unique to GANs in that it is an oscillation of parameters, where the model auto-corrects and can never reach the goal. 
+                        <a class="reference" href="https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b">source</a>
+                    </app-screen-content-text>
+                </app-screen-content-section>
+                <app-screen-content-section>
+                    <app-screen-content-text>
+                        Because of all of these difficulties in training GAN's, we decided to use Lightweight GAN, which takes care of addressing those issues in ways we wouldn't have the time or skill to do ourselves.
                     </app-screen-content-text>
                 </app-screen-content-section>
             </app-screen-content>            

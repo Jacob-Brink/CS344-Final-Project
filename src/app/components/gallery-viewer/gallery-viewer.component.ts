@@ -25,6 +25,7 @@ export class GalleryViewerComponent implements OnInit {
   }
 
   onEscape(): void {
+    console.log("YOOOO I CLOSED")
     this.closeEvent.emit();
   }
 

@@ -15,7 +15,7 @@
     background-color: white;
     border-radius: 5px;
     border: 1px gray solid;
-    z-index: 2000000;
+    z-index: 2200;
 }
 
 .closed {
@@ -24,6 +24,7 @@
 
 .overlay {
     position: fixed;
+    z-index: 2000;
     top: 0px;
     left: 0px;
     height: 100vh;

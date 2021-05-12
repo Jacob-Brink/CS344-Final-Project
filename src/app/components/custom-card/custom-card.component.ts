@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CustomCardComponent implements OnInit {
 
-  @Input() title: string = "Title";
+  @Input() title: string = "";
 
   constructor() { }
 

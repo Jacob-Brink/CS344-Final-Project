@@ -3,6 +3,8 @@ h1 {
     padding: calc(10px + 2vw);
     width: 80%;
     min-width: 500px;
+    max-width: 1200px;
+    text-align: center;
 }
 
 :host {

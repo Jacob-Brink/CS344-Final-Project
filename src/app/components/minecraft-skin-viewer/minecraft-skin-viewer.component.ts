@@ -47,6 +47,7 @@ export class MinecraftSkinViewerComponent implements OnInit {
   };
 
   @Input() set skinImage(value: string) {
+    this._skinImage = value;
     if (this.skinViewer) {
       this.skinViewer.loadSkin(value);
     }
@@ -95,14 +96,15 @@ export class MinecraftSkinViewerComponent implements OnInit {
 
     this.skinViewer = new skinview3d.SkinViewer({
       canvas: this.canvas.nativeElement,
-      skin: this.skinImage,
+      skin: this._skinImage,
     });
+
+    for (const part of skinParts) {
+      this.skinViewer.playerObject.skin[part][skinLayers[1]].visible = false;
+    }
   
     this.skinViewer.width = this.width;
     this.skinViewer.height = this.height;
-
-    // Load another skin
-    this.skinViewer.loadSkin("/assets/images/skin2.png");
   
     // Unload(hide) the cape / elytra
     this.skinViewer.loadCape(null);

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
+import { ImageApiService } from 'src/app/services/image-api.service';
 
 @Component({
   selector: 'app-gallery',
@@ -11,13 +12,13 @@ export class GalleryComponent implements OnInit {
   skinImages: Array<string> = new Array(20);
 
   currentID: number = 0;
+  isOpen: boolean = false;
 
-  constructor() {
-    this.skinImages[0] = '/assets/images/skin.png';
-    this.skinImages[1] = '/assets/images/skin2.png';
-    for (let i = 0; i < 20; i++) {
-      this.skinImages[i] = '/assets/images/skin.png';
-    }
+  imageAPI: ImageApiService;
+  currentImage: string = 'http://localhost:3000/image/10/texture';
+
+  constructor(private ImageAPI: ImageApiService) {
+    this.imageAPI = ImageAPI;
   }
 
   ngOnInit(): void {
@@ -25,6 +26,13 @@ export class GalleryComponent implements OnInit {
 
   onSelection(id: number) {
     this.currentID = id;
+    console.log("Selected an image!")
+    this.currentImage = `http://localhost:3000/image/${id}/texture`;
+    this.isOpen = true;
+  }
+
+  onCloseEvent(): void {
+    this.isOpen = false;
   }
 
   onChangePage(e: number) {

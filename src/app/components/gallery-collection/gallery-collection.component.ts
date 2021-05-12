@@ -20,7 +20,7 @@ export class GalleryCollectionComponent implements OnInit {
   @Input()
   start: number = 0;
 
-  
+
   
   constructor() {}
 
@@ -32,6 +32,8 @@ export class GalleryCollectionComponent implements OnInit {
   }
 
   onPageChange(e: PageEvent) {
+    this.start = e.pageIndex * 20;
+    console.log(this.start);
     this.pageChangeEvent.emit(e.pageIndex);
   }
 

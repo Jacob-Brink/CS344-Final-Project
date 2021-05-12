@@ -30,6 +30,9 @@ import { ScreenTitleComponent } from './components/screen-title/screen-title.com
 import { ScreenContentComponent } from './components/screen-content/screen-content.component';
 import { ScreenContentSectionComponent } from './components/screen-content-section/screen-content-section.component';
 import { ScreenContentImageCollageComponent } from './components/screen-content-image-collage/screen-content-image-collage.component';
+import { ScreenContentTextComponent } from './components/screen-content-text/screen-content-text.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,8 @@ import { ScreenContentImageCollageComponent } from './components/screen-content-
     ScreenTitleComponent,
     ScreenContentComponent,
     ScreenContentSectionComponent,
-    ScreenContentImageCollageComponent
+    ScreenContentImageCollageComponent,
+    ScreenContentTextComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +70,8 @@ import { ScreenContentImageCollageComponent } from './components/screen-content-
     MatIconModule,
     MatCheckboxModule,
     FormsModule,
+    MatProgressSpinnerModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

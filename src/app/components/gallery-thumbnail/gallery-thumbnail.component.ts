@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ImageApiService } from 'src/app/services/image-api.service';
 
 @Component({
   selector: 'app-gallery-thumbnail',
@@ -7,22 +9,39 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class GalleryThumbnailComponent implements OnInit {
 
-  @Input()
-  id: number = 0;
+  @Input() set id(value: number) {
+    this._id = value;
+    if (this.safeToLoadImage) {
+      this.loadImage();
+    }
+  }
 
   @Input()
-  imageURL: string = '/assets/images/skin.png';
+  imageURL: string = '';
 
   @Output()
   wasSelected: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor() { }
+  imageAPI: ImageApiService;
+  _id: number = 0;
+  safeToLoadImage: boolean = false;
+
+  async loadImage() {
+    const imageFile = await this.imageAPI.getSkinPreview(this._id);
+    this.imageURL = imageFile;
+  }
+
+  constructor(private imageAPIService: ImageApiService) {
+    this.imageAPI = imageAPIService;
+  }
 
   ngOnInit(): void {
+    this.safeToLoadImage = true;
+    this.loadImage();
   }
 
   onSelection(): void {
-    this.wasSelected.emit(this.id);
+    this.wasSelected.emit(this._id);
   }
 
 }

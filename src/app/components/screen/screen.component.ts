@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-screen',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./screen.component.scss']
 })
 export class ScreenComponent implements OnInit {
+
+  @Input()
+  title: string = "No Title";
 
   constructor() { }
 

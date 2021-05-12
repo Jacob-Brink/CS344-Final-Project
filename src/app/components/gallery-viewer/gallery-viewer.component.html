@@ -1,4 +1,4 @@
-<div id="gallery-highlighted-view">
+<div class="gallery-highlighted-view" [class.closed]="!isOpen">
     <div id="view-visual">
         <app-minecraft-skin-viewer [skinImage]="skinImage" [width]="300*1.2" [height]="400*1.2" [walkingEnabled]="isWalking" [outerEnabled]="hasOuter"></app-minecraft-skin-viewer>
     </div>
@@ -9,4 +9,7 @@
             <button mat-raised-button color="primary">Download</button>
         </div>
     </div>
+</div>
+<div class="overlay" [class.closed]="!isOpen" (click)="onEscape()">
+    
 </div>

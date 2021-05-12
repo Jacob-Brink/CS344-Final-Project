@@ -2,8 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
-    height: 100vh;
     width: 100vw;
+}
+
+.screen-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

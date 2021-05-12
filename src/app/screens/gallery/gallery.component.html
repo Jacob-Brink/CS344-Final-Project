@@ -30,5 +30,5 @@
 
 <div class="gallery-main-container">
     <app-gallery-collection [imageLinks]="skinImages" [start]="0" (selectedImage)="onSelection($event)" (pageChangeEvent)="onChangePage($event)"></app-gallery-collection>
-    <!-- <app-gallery-viewer [skinImage]="skinImages[currentID]"></app-gallery-viewer> -->
+    <app-gallery-viewer [skinImage]="currentImage" [isOpen]="isOpen" (closeEvent)="onCloseEvent()"></app-gallery-viewer>
 </div>

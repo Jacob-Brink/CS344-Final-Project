@@ -67,54 +67,61 @@
         <!-- 
         <app-introduction></app-introduction> -->
 
-        <app-screen>
-            <app-screen-title>
-                The Minecraft spinoff of "ThisPersonDoesNotExist" you didn't know you needed!
-            </app-screen-title>
+        <app-screen title="The Minecraft spinoff of 'ThisPersonDoesNotExist' you didn't know you needed!">
             <app-screen-content>
-                <app-screen-content-section title="Our Inspiration">
-                    "This Minecrafter Does Not Exist" is an experiment to see if we could recreate
-                    the GAN phenonomen
-                    known as "this person does not exist" in the context of the voxel sandbox game Minecraft.
-                    More importantly, we hope this website can introduce people to what GAN's are in a fun,
-                    interactive format. We hope you enjoy this as much as we did!
+                <app-screen-content-section>
+                    <app-screen-content-text title="Our Inspiration">
+                        "This Minecrafter Does Not Exist" is an experiment to see if we could recreate the GAN phenonomen
+                        known as "this person does not exist" in the context of the voxel sandbox game Minecraft.
+                        More importantly, we hope this website can introduce people to what GAN's are in a fun,
+                        interactive format. We hope you enjoy this as much as we did!   
+                    </app-screen-content-text>
+                    <app-screen-content-image-collage>
+                    </app-screen-content-image-collage>
                 </app-screen-content-section>
-                <app-screen-content-section title="What we offer">
-                    We trained a GAN on over 600,000 Minecraft skins, and we provide all of the results in the gallery below. 
-                    You can view the skins in 3d and download them for your personal use if you find any that look decent ;).
-                    If you are interested in how GAN's work, and how we applied GAN's to one of the best games on earth, checkout the learn section!
-                    We describe the resources used, our data wrangling, and how we managed to put them all together.
+                <app-screen-content-section>
+                    <app-screen-content-text title="What we Offer">
+                        We trained a GAN on over 600,000 Minecraft skins, and we provide all of the results in the gallery below. 
+                        You can view the skins in 3d and download them for your personal use if you find any that look decent ;).
+                        If you are interested in how GAN's work, and how we applied GAN's to one of the best games on earth, checkout the learn section!
+                        We describe the resources used, our data wrangling, and how we managed to put them all together.   
+                    </app-screen-content-text>
                 </app-screen-content-section>
-                <!-- <app-screen-content-image-collage></app-screen-content-image-collage> -->
-            </app-screen-content>
-            
+            </app-screen-content>            
         </app-screen>
 
-        <div class="screen">
-            <h2 class="screen-title">The Minecraft spinoff of "thispersondoesnotexist" you didn't know you needed.</h2>
-            <div class="screen-content">
-                <div class="screen-content-text">
-                    <app-custom-card title="Introduction">
-                        ThisMinecraftPlayerDoesNotExist is an experiment to see if we could recreate the GAN phenonomen
-                        known as thispersondoesnotexist in the context of the voxel sandbox game Minecraft.
+        <app-screen title="Behind the Scenes">
+            <app-screen-content>
+                <app-screen-content-section>
+                    <app-screen-content-text title="Data Wrangling">
+                        "This Minecrafter Does Not Exist" is an experiment to see if we could recreate the GAN phenonomen
+                        known as "this person does not exist" in the context of the voxel sandbox game Minecraft.
                         More importantly, we hope this website can introduce people to what GAN's are in a fun,
-                        interactive format. We hope you enjoy this as much as we did!
-                    </app-custom-card>
-                </div>
-
-                <div class="screen-content-img">
-                    <img src="/assets/images/skins-intermediate.png">
-                </div>
-
-            </div>
-
-        </div>
+                        interactive format. We hope you enjoy this as much as we did!   
+                    </app-screen-content-text>
+                    <app-screen-content-image-collage>
+                    </app-screen-content-image-collage>
+                </app-screen-content-section>
+                <app-screen-content-section>
+                    <app-screen-content-text title="Lightweight GAN">
+                        We trained a GAN on over 600,000 Minecraft skins, and we provide all of the results in the gallery below. 
+                        You can view the skins in 3d and download them for your personal use if you find any that look decent ;).
+                        If you are interested in how GAN's work, and how we applied GAN's to one of the best games on earth, checkout the learn section!
+                        We describe the resources used, our data wrangling, and how we managed to put them all together.   
+                    </app-screen-content-text>
+                </app-screen-content-section>
+                <app-screen-content-section>
+                    <app-screen-content-text title="Website Design">
+                        I, Jacob Brink, worked on the website, designing the theme of “ThisMinecrafterDoesNotExist” as a parody of thispersondoesnotexist. I used Angular for the front end, skinview3d node module to display the minecraft skins as 3d models, and node js to host the images.  
+                    </app-screen-content-text>
+                </app-screen-content-section>
+            </app-screen-content>            
+        </app-screen>
 
         <div class="screen gallery">
             <h2 class="screen-title">Mineraft Skin Gallery</h2>
             <app-gallery></app-gallery>
         </div>
-
         <!--         
         <div class="screen gallery">
             <h2 class="screen-title">Minecraft Skin Gallery</h2>
@@ -145,61 +152,5 @@
                 </div>
             </div>
         </div> -->
-
-
-
-
-        <div class="screen">
-            <h2 class="screen-title">Behind the Scenes</h2>
-            <div class="screen-content">
-                <div class="screen-content-text">
-                    <app-custom-card title="Preparing Data">
-                        Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
-                        ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                    </app-custom-card>
-                    <app-custom-card title="Lightweight GAN">
-                        Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
-                        ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                    </app-custom-card>
-                </div>
-
-                <div class="screen-content-img">
-                    <img src="/assets/images/skins-intermediate.png">
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="screen">
-            <h2 class="screen-title">GAN Basics</h2>
-            <div class="screen-content">
-                <div class="screen-content-text">
-                    <app-custom-card title="discriminator vs. generator">
-                        Best said by the writers at fast.ai, “GAN stands for Generative Adversarial Nets and were
-                        invented by Ian Goodfellow.” A GAN takes in data and creates two elements to generate new
-                        images. The first is a critic, a model that will take in the true data and the generated images
-                        and determine which is true and which has been generated. The second element is the generator, a
-                        model that takes in the data, analyzes similarities, and makes its own, trying to trick the
-                        critic into believing its images. Because of this, a GAN improves by attempting to fool itself.
-                        <a class="report-link"
-                            href="https://colab.research.google.com/github/fastai/fastai/blob/master/nbs/24_vision.gan.ipynb#scrollTo=_YkGTzCj7GhD">source</a>
-                    </app-custom-card>
-                    <app-custom-card title="inherent instabilities">
-                        Due to the adversarial nature of GANs, there is the inherent issue of instability. The two
-                        elements of a GAN, the critic and the generator, are trying to get the best of each other, and
-                        both grow through this competition. If one were to become stronger than the other, competition
-                        begins to dissolve, and neither model improves.
-                    </app-custom-card>
-                </div>
-
-                <div class="screen-content-img">
-                    <img src="/assets/images/skins-intermediate.png">
-                </div>
-
-            </div>
-
-        </div>
-
     </div>
 </div>

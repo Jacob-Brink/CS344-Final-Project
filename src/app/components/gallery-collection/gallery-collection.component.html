@@ -2,6 +2,6 @@
     <mat-paginator class="paginator" [length]="10000000" [pageSize]="20" (page)="onPageChange($event)"></mat-paginator>
     <div id="gallery-view">
         <app-gallery-thumbnail *ngFor="let image of imageLinks; let i = index;" [imageURL]="image"
-                (wasSelected)="onSelection($event)" [id]="i"></app-gallery-thumbnail>
+                (wasSelected)="onSelection($event)" [id]="i+start"></app-gallery-thumbnail>
     </div>
 </div>

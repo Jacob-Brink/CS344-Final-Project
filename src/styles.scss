@@ -84,7 +84,7 @@ $retro-dark-app-background-color:#000000;
 
 @font-face {
     font-family: BebasNeue-Regular;
-    src: url('/assets/fonts/BebasNeue/BebasNeue-Regular.otf') format("opentype");
+    src: url('./assets/fonts/BebasNeue/BebasNeue-Regular.otf') format("opentype");
  }
 
 $custom-typography: mat-typography-config(

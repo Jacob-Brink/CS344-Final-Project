@@ -15,7 +15,7 @@ export class GalleryComponent implements OnInit {
   isOpen: boolean = false;
 
   imageAPI: ImageApiService;
-  currentImage: string = '/image/10/texture';
+  currentImage: string = 'http://172.105.23.21/image/10/texture';
 
   constructor(private ImageAPI: ImageApiService) {
     this.imageAPI = ImageAPI;
@@ -27,7 +27,7 @@ export class GalleryComponent implements OnInit {
   onSelection(id: number) {
     this.currentID = id;
     console.log("Selected an image!")
-    this.currentImage = `/image/${id}/texture`;
+    this.currentImage = `http://172.105.23.21/image/${id}/texture`;
     this.isOpen = true;
   }
 

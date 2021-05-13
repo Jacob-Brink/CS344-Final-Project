@@ -74,8 +74,7 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "CS344-Final-Project:build:production",
-              "proxyConfig": "src/proxy.conf.json"
+              "browserTarget": "CS344-Final-Project:build:production"
             }
           }
         },

@@ -1,5 +1,5 @@
 <div class="gallery-main-container">
-    <mat-paginator class="paginator" [length]="40" [pageSize]="20" (page)="onPageChange($event)"></mat-paginator>
+    <mat-paginator class="paginator" [length]="3000" [pageSize]="20" (page)="onPageChange($event)"></mat-paginator>
     <div id="gallery-view">
         <app-gallery-thumbnail *ngFor="let image of imageLinks; let i = index;" [imageURL]="image"
                 (wasSelected)="onSelection($event)" [id]="i+start"></app-gallery-thumbnail>

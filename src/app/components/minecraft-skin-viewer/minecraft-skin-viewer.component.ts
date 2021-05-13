@@ -28,7 +28,7 @@ export class MinecraftSkinViewerComponent implements OnInit {
 
   _outerEnabled: boolean = false;
   _walkingEnabled: boolean = false;
-  _skinImage: string = "http://172.105.23.21/image/201/texture"; 
+  _skinImage: string = "assets/images/gallery/generated-05-10-2021_13-51-24-201-ema.png"; 
 
   walkToggleEvent: any = new window.Event('walk-toggle');
   outerToggleEvent: any = new window.Event('outer-toggle');

@@ -27,7 +27,7 @@ export class GalleryThumbnailComponent implements OnInit {
   safeToLoadImage: boolean = false;
 
   loadImage() {
-    const imageFile = `http://172.105.23.21/image/${this._id}/preview`;
+    const imageFile = `assets/images/gallery/transformgenerated-05-10-2021_13-51-24-${this._id}.png`;
     this.imageURL = imageFile;
   }
 

@@ -27,7 +27,7 @@ export class GalleryThumbnailComponent implements OnInit {
   safeToLoadImage: boolean = false;
 
   loadImage() {
-    const imageFile = `http://172.105.23.21/image/${this._id}/preview`;
+    const imageFile = `/image/${this._id}/preview`;
     this.imageURL = imageFile;
   }
 

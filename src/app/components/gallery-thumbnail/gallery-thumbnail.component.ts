@@ -26,8 +26,8 @@ export class GalleryThumbnailComponent implements OnInit {
   _id: number = 0;
   safeToLoadImage: boolean = false;
 
-  async loadImage() {
-    const imageFile = await this.imageAPI.getSkinPreview(this._id);
+  loadImage() {
+    const imageFile = `/image/${this._id}/preview`;
     this.imageURL = imageFile;
   }
 

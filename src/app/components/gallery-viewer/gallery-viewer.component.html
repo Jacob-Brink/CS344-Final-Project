@@ -6,7 +6,7 @@
         <div class="view-controls">
             <mat-checkbox class="example-margin" color="primary" [(ngModel)]="hasOuter">Outer</mat-checkbox>
             <mat-checkbox class="example-margin" color="primary" [(ngModel)]="isWalking">Walking</mat-checkbox>
-            <button mat-raised-button color="primary">Download</button>
+            <a mat-raised-button color="primary" target="_blank" download [href]="skinImage">Download</a>
         </div>
     </div>
 </div>
